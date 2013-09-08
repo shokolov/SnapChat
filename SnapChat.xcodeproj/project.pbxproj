@@ -10,6 +10,7 @@
 		0675F67A17C075600077ED27 /* start.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0675F67917C075600077ED27 /* start.PNG */; };
 		0675F67C17C075680077ED27 /* tap_login.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0675F67B17C075680077ED27 /* tap_login.PNG */; };
 		0675F67E17C075700077ED27 /* tap_signup.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0675F67D17C075700077ED27 /* tap_signup.PNG */; };
+		069CB30217DC000E007707B1 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069CB30117DC000E007707B1 /* LogInViewController.m */; };
 		06F237F517C05D420084E8B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F237F417C05D420084E8B9 /* UIKit.framework */; };
 		06F237F717C05D420084E8B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F237F617C05D420084E8B9 /* Foundation.framework */; };
 		06F237F917C05D420084E8B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F237F817C05D420084E8B9 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 		0675F67917C075600077ED27 /* start.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.PNG; sourceTree = "<group>"; };
 		0675F67B17C075680077ED27 /* tap_login.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap_login.PNG; sourceTree = "<group>"; };
 		0675F67D17C075700077ED27 /* tap_signup.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap_signup.PNG; sourceTree = "<group>"; };
+		069CB30017DC000E007707B1 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		069CB30117DC000E007707B1 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		06F237F117C05D420084E8B9 /* SnapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F237F417C05D420084E8B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06F237F617C05D420084E8B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				06F2380C17C05D420084E8B9 /* MainStoryboard.storyboard */,
 				06F2380F17C05D420084E8B9 /* AppStoreExViewController.h */,
 				06F2381017C05D420084E8B9 /* AppStoreExViewController.m */,
+				069CB30017DC000E007707B1 /* LogInViewController.h */,
+				069CB30117DC000E007707B1 /* LogInViewController.m */,
 				0675F67817C075280077ED27 /* Assert */,
 				06F237FB17C05D420084E8B9 /* Supporting Files */,
 			);
@@ -198,6 +203,7 @@
 				06F2380117C05D420084E8B9 /* main.m in Sources */,
 				06F2380517C05D420084E8B9 /* AppStoreExAppDelegate.m in Sources */,
 				06F2381117C05D420084E8B9 /* AppStoreExViewController.m in Sources */,
+				069CB30217DC000E007707B1 /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -122,14 +122,25 @@ Privacy Policy</string>
             </objects>
             <point key="canvasLocation" x="1140" y="861"/>
         </scene>
-        <!--View Controller - LogIn-->
+        <!--Log In View Controller - LogIn-->
         <scene sceneID="eQU-Is-QqC">
             <objects>
-                <viewController title="LogIn" id="Rnl-3u-1Vz" sceneMemberID="viewController">
+                <viewController title="LogIn" id="Rnl-3u-1Vz" customClass="LogInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kZ2-DC-kop">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="account" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y68-Jq-Dc8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="Rrd-cP-4pA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geh-Ax-kSB">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-dZ-MIU">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="6OC-tf-LVU"/>
@@ -143,33 +154,28 @@ Privacy Policy</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JTH-xL-xie" kind="push" id="3Lb-LW-kDI"/>
+                                    <action selector="doButtonDown:" destination="Rnl-3u-1Vz" eventType="touchDown" id="sbT-OI-faG"/>
+                                    <segue destination="JTH-xL-xie" kind="push" identifier="cameraSegue" id="Oil-f0-P3Y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y68-Jq-Dc8">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="223" id="Rrd-cP-4pA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geh-Ax-kSB">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="y68-Jq-Dc8" firstAttribute="trailing" secondItem="geh-Ax-kSB" secondAttribute="trailing" type="default" id="2yG-SP-GsT"/>
+                            <constraint firstItem="ykn-dZ-MIU" firstAttribute="top" secondItem="kZ2-DC-kop" secondAttribute="top" constant="147" id="7f7-5u-b5Y"/>
                             <constraint firstItem="y68-Jq-Dc8" firstAttribute="leading" secondItem="geh-Ax-kSB" secondAttribute="leading" type="default" id="H8H-7f-0hB"/>
-                            <constraint firstItem="geh-Ax-kSB" firstAttribute="centerX" secondItem="ykn-dZ-MIU" secondAttribute="centerX" type="default" id="I69-Ca-tks"/>
-                            <constraint firstItem="ykn-dZ-MIU" firstAttribute="top" secondItem="kZ2-DC-kop" secondAttribute="top" constant="156" id="NxM-KU-5BG"/>
+                            <constraint firstItem="ykn-dZ-MIU" firstAttribute="centerX" secondItem="geh-Ax-kSB" secondAttribute="centerX" type="default" id="Ilg-yU-8ce"/>
                             <constraint firstItem="geh-Ax-kSB" firstAttribute="top" secondItem="kZ2-DC-kop" secondAttribute="top" constant="92" id="atP-cD-i8J"/>
-                            <constraint firstItem="geh-Ax-kSB" firstAttribute="centerX" secondItem="kZ2-DC-kop" secondAttribute="centerX" type="default" id="eAk-mm-CZQ"/>
+                            <constraint firstItem="y68-Jq-Dc8" firstAttribute="centerX" secondItem="kZ2-DC-kop" secondAttribute="centerX" type="default" id="oJm-lO-8GF"/>
                             <constraint firstItem="y68-Jq-Dc8" firstAttribute="top" secondItem="kZ2-DC-kop" secondAttribute="top" constant="36" id="x8t-yv-lFb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pxf-ce-6Yz"/>
+                    <connections>
+                        <outlet property="account" destination="y68-Jq-Dc8" id="eDG-Un-1gT"/>
+                        <outlet property="password" destination="geh-Ax-kSB" id="rfH-yu-yOK"/>
+                        <outlet property="view" destination="kZ2-DC-kop" id="avE-lH-otr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zy-ts-vBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,14 +215,6 @@ Privacy Policy</string>
             <point key="canvasLocation" x="-236" y="-187"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AppStoreExViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppStoreExViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
